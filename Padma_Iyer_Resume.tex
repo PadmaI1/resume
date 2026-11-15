@@ -1,0 +1,194 @@
+%-------------------------
+% Resume: Padma Iyer (AI Engineering)
+% Based on Rezume (Nanu Panchamurthy), itself based on https://github.com/sb2nov/resume
+% License : MIT
+%-------------------------
+
+%------------PACKAGES----------------
+\documentclass[a4paper,11pt]{article}
+
+\usepackage{titlesec}
+\usepackage{color}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{tabularx}
+\usepackage{latexsym}
+\usepackage{marvosym}
+\usepackage[empty]{fullpage}
+\usepackage[hidelinks]{hyperref}
+\usepackage[normalem]{ulem}
+\usepackage[english]{babel}
+%-----------------------------------------
+
+\input glyphtounicode
+\pdfgentounicode=1 % ATS-readable PDF
+
+%----------FONT OPTIONS-------------------
+\usepackage[default]{sourcesanspro}
+\urlstyle{same}
+%-----------------------------------------
+
+%----------MARGIN OPTIONS-----------------
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0in}
+\renewcommand{\footrulewidth}{0in}
+
+\setlength{\tabcolsep}{0in}
+
+\addtolength{\oddsidemargin}{-0.55in}
+\addtolength{\topmargin}{-0.6in}
+\addtolength{\textwidth}{1.1in}
+\addtolength{\textheight}{1.2in}
+
+\raggedbottom{}
+\raggedright{}
+%------------------------------------------
+
+%--------SECTIONING COMMANDS---------
+\titleformat{\section}
+  {\scshape\large}{}
+    {0em}{\color{blue}}[\color{black}\titlerule]
+\titlespacing*{\section}{0pt}{8pt}{4pt} % space before / after section titles
+%-------------------------------------
+
+%--------SPACING----------------------
+\setlist[itemize]{topsep=1pt, itemsep=1pt, parsep=0pt, partopsep=0pt}
+\renewcommand{\ULdepth}{2pt}
+%-------------------------------------
+
+%--------CUSTOM COMMANDS--------------
+% resumeItem renders a bullet point
+\newcommand{\resumeItem}[1]{
+  \item\small{#1}
+}
+
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.18in, rightmargin=0.11in]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{3pt}}
+
+% resumeSectionType renders "Type : items" with aligned colons
+\newcommand{\resumeSectionType}[3]{
+  \item\small{\begin{tabular*}{0.97\textwidth}[t]{
+    p{0.13\linewidth}p{0.02\linewidth}p{0.85\linewidth}
+  }
+    \textbf{#1} & #2 & #3
+  \end{tabular*}}
+}
+
+% resumeProjectHeading renders "Title | tech stack" on the left and a link on the right
+\newcommand{\resumeProjectHeading}[3]{
+  \item\small{
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} $|$ \textit{#2} & #3
+    \end{tabular*}
+  }
+}
+
+% resumeQuadHeading renders two rows: bold title / date, italic subtitle / location
+\newcommand{\resumeQuadHeading}[4]{
+  \item
+  \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & #2 \\
+    \textit{\small#3} & \textit{\small #4} \\
+  \end{tabular*}
+}
+
+\newcommand{\resumeHeadingListStart}{
+  \begin{itemize}[leftmargin=0.1in, label={}]
+}
+\newcommand{\resumeHeadingListEnd}{\end{itemize}}
+%-------------------------------------------
+
+
+%__________________RESUME____________________
+\begin{document}
+
+%-----------CONTACT DETAILS------------------
+\begin{center}
+  {\Huge\textbf{Padma Iyer}} \\ \vspace{4pt}
+  \small
+  Pune, Maharashtra, India $|$
+  \href{mailto:padmaiyer1123@gmail.com}{\uline{padmaiyer1123@gmail.com}} $|$
+  % TODO: Mobile: XXXXXXXXXX $|$
+  \href{https://github.com/PadmaI1}{\uline{github.com/PadmaI1}} $|$
+  \href{https://www.linkedin.com/in/padma-i-99083922b}{\uline{LinkedIn}}
+\end{center}
+\vspace{-6pt}
+%--------------------------------------------
+
+
+%-----------SUMMARY--------------------------
+\section{Summary}
+\small{
+  AI Engineer and Computer Science graduate (B.E., SPPU) with industry experience at \textbf{Amdocs} building \textbf{AI agents and LLM applications} in \textbf{Python}. Hands-on with \textbf{ReAct agents, MCP servers, RAG pipelines} and agent testing and evaluation, backed by FastAPI services and observability tooling, plus foundational ML with scikit-learn and Keras.
+}
+%--------------------------------------------
+
+
+%--------------SKILLS------------------------
+\section{Technical Skills}
+  \resumeHeadingListStart{}
+    \resumeSectionType{Languages}{:}{Python, SQL, Bash, JavaScript, HTML/CSS}
+    \resumeSectionType{LLM / Agents}{:}{ReAct Agents, MCP, RAG, FAISS, Azure OpenAI, Embeddings, Prompt Engineering, Agent Evaluation}
+    \resumeSectionType{ML}{:}{scikit-learn, TensorFlow/Keras, pandas, NumPy}
+    \resumeSectionType{Backend}{:}{FastAPI, Flask, SQLAlchemy, Kafka, REST APIs, WebSockets, pytest}
+    \resumeSectionType{Tools}{:}{Grafana, Loki, Docker, Git, GitHub Actions, Azure, Linux/Unix}
+  \resumeHeadingListEnd{}
+%--------------------------------------------
+
+
+%-----------EXPERIENCE-----------------------
+\section{Experience}
+\resumeHeadingListStart{}
+  \resumeQuadHeading{Software Engineer}{Jul 2025 -- May 2026}
+  {Amdocs}{Pune, Maharashtra, India}
+    \resumeItemListStart{}
+      \resumeItem{Built \textbf{tools and MCP servers} for CI/CD pipelines and audit trails, letting teams investigate audits through \textbf{AI agents} instead of manual log searches}
+      \resumeItem{Developed a \textbf{ReAct agent} that monitors structured action logs from a SIM issuing and management portal and responds to \textbf{malicious activity} with automated reporting, cleanup and prevention}
+      \resumeItem{Unit tested, \textbf{benchmarked and evaluated} agents as part of a Scrum team, using \textbf{Python, FastAPI, Kafka, Loki and Grafana}}
+    \resumeItemListEnd{}
+\resumeHeadingListEnd{}
+%---------------------------------------------
+
+
+%-----------PROJECTS--------------------------
+\section{Projects}
+  \resumeHeadingListStart{}
+    \resumeProjectHeading{ResolveIQ: RAG Customer Support Assistant}{Python, FastAPI, FAISS, Azure OpenAI}{\href{https://github.com/PadmaI1/resolve-iq}{\uline{GitHub}}}
+      \resumeItemListStart{}
+        \resumeItem{Built a \textbf{RAG assistant} that answers only from a curated knowledge base, using Azure OpenAI embeddings, \textbf{FAISS} vector search and GPT-4, with source citations in every answer}
+        \resumeItem{Added \textbf{query rewriting} for follow-up questions and \textbf{hallucination controls}: a similarity threshold that returns ``I don't know'' without calling the LLM, plus context-only prompting}
+        \resumeItem{Made it production-ready with session memory, rate limiting, health checks, structured logging, an offline \textbf{pytest} suite and \textbf{CI/CD to Azure App Service} with Docker}
+      \resumeItemListEnd{}
+
+    \resumeProjectHeading{BookVerse: AI-Native Book Lending Platform}{Python, Flask, MCP, Socket.IO, Razorpay}{\href{https://github.com/PadmaI1/BookVerse}{\uline{GitHub}}}
+      \resumeItemListStart{}
+        \resumeItem{Built a community book-lending web app with a request $\rightarrow$ approve $\rightarrow$ deposit $\rightarrow$ return flow, \textbf{real-time chat} (Socket.IO), email verification and notifications}
+        \resumeItem{Integrated \textbf{Razorpay} for refundable security deposits with payment signature verification and automatic refunds on return}
+        \resumeItem{Made the app \textbf{AI-native} with an \textbf{MCP server} exposing 30 tools, so assistants like Claude can search, lend, borrow and chat for a user, with confirmation required for destructive actions}
+      \resumeItemListEnd{}
+
+    \resumeProjectHeading{WasteWise: Waste Image Classifier}{Python, TensorFlow/Keras, Flask}{\href{https://github.com/PadmaI1/waste-wise}{\uline{GitHub}}}
+      \resumeItemListStart{}
+        \resumeItem{Trained a \textbf{VGG16-based CNN} on 5,000+ images to classify 7 waste categories (plastic, glass, metal, paper, cardboard, organic, other)}
+        \resumeItem{Served the model in a \textbf{Flask} web app where users upload a photo and get the predicted category with recycling and reuse suggestions}
+      \resumeItemListEnd{}
+
+    \resumeProjectHeading{CarbonTrace: CO$_2$ Emissions Prediction}{Python, scikit-learn, pandas}{\href{https://github.com/PadmaI1/carbon-trace}{\uline{GitHub}}}
+      \resumeItemListStart{}
+        \resumeItem{Cleaned and merged Our World in Data CO$_2$ and energy datasets (79 countries, 2000--2022) and compared Linear Regression, Random Forest and \textbf{Gradient Boosting} (test R$^2$ 0.997)}
+        \resumeItem{Checked how well models generalize to unseen countries and future years using \textbf{grouped cross-validation} and a baseline comparison, and visualized renewable-energy trends}
+      \resumeItemListEnd{}
+  \resumeHeadingListEnd{}
+%--------------------------------------------
+
+
+%-----------EDUCATION-------------------------
+\section{Education}
+  \resumeHeadingListStart{}
+    \resumeQuadHeading{Savitribai Phule Pune University (SPPU)}{2021 -- 2025}
+    {Bachelor of Engineering in Computer Science $|$ CGPA: \textbf{8.6}/10}{Pune, Maharashtra, India}
+  \resumeHeadingListEnd{}
+%---------------------------------------------
+
+\end{document}
